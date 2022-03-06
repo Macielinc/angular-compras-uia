@@ -1,0 +1,17 @@
+
+<div><h2>Detalles: {{reporte.name}}</h2></div>
+<div><span>id:</span>{{reporte.id}}</div>
+
+<ul class="reportes">
+    <li *ngFor="let reporte of reportes"
+        [class.selected]="reporte === selectedReporte" (click)="onSelect(reporte)">
+        <span class="badge">{{reporte.id}}</span>
+        {{reporte.name}}
+    </li>
+    <!-- <label for="name">Nombre del reporte:</label>
+    <input id="name" [(ngModel)]="reporte.name" placeholder="name"/> -->
+</ul>
+
+
+
+<router-outlet></router-outlet>
